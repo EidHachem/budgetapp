@@ -1,1 +1,12 @@
 <h1>All users</h1>
+
+<% @users.each do |user| %>
+  <div class="user">
+    <h2><%= user.name %></h2>
+    <p><%= user.email %></p>
+    <p><%= user.created_at %></p>
+    <p><%= user.updated_at %></p>
+  </div>
+<% end %>
+
+<%= link_to "Back", root_path %>

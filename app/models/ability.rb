@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -9,7 +7,7 @@ class Ability
 
     can :manage, Budget, user: user
     can :manage, Group, user: user
-    can :manage, GroupBudget, user: user
+    can :manage, GroupBudget, user:
     #   return unless user.present?
     #   can :read, :all
     #   return unless user.admin?

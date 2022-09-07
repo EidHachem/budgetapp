@@ -6,7 +6,11 @@
     <p><%= user.email %></p>
     <p><%= user.created_at %></p>
     <p><%= user.updated_at %></p>
+    <% if user == current_user %>
+      <%= link_to 'Edit', edit_user_registration_path, :class => 'btn btn-primary' %>
+    <% end %>
   </div>
 <% end %>
 
 <%= link_to "Back", root_path %>
+<%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false }, :class => 'nav-link' %>
